@@ -1,0 +1,27 @@
+- Instalacion de Node
+- Instalacion de Yarn
+- Node version 6.10 > ya incluye Yarn
+- Node version menor a 6.10 instalar * npm i -g corepack
+- Activar Yarn
+    * sudo corepack enable
+- Configuracion nueva aplicacion
+    * yarn global add expo-cli
+    En caso de no reconocer expo --version agregar variable de entorno yarn localizada en comando * yarn global bin
+    * expo init myApp
+- Descargar android studio para emulador
+- Arrancar app en emulador
+    * yarn android
+- Navegaciones en app
+1. Primero instalamos React Navigation
+Vamos a la pagina oficial https://reactnavigation.org
+    * yarn add @react-navigation/native@^5.x
+Si estamos usando expo, debemos installar esta dependencia
+    * expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+Debemos importar esto en el archivo App.js
+    import 'react-native-gesture-handler';
+Ahora instalaremos los Stacks
+    * yarn add @react-navigation/stack@^5.x
+    * yarn add @react-navigation/bottom-tabs@^5.x
+    * yarn add @react-navigation/drawer@^5.x
+Para empezar a usar React Navigation debemos envolver nuestra app en <NavigationContainer> en app.js
+    import { NavigationContainer } from '@react-navigation/native';
